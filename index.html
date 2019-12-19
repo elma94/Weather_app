@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <header id="header">
+        <p style ="color:#302f2f;">created by elma94</p>
+    </header>
+    <div id="welcome-screen">
+        <img id="cloud" src="https://icon-library.net/images/cloud-png-icon/cloud-png-icon-4.jpg" width="100px" height="90px">
+        <h1 id="heading">Weather</h1>
+        <form id="city-query">
+            <input id="city-query-input" type="text" placeholder="check forecast">
+            <svg id = "submit" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+        </form>
+    </div>
+
+    <div id="error"></div>
+    <div id="blur-square"><div id="square"></div></div>
+    <div id="container-block">
+        <div class="container-row" id="city-name"></div>
+        <div class="container-row" id="date-time"></div>
+
+        <div class="container-row-center">
+            <div class="container-column">
+                <div class="container-column-left" id="temperature"></div>
+                <div class="container-column-left" id="feels-temperature"></div>
+            </div>
+
+            <div class="container-column-center">
+                <img id="icon" width="100px" height="100px">
+            </div>
+
+            <div class="container-column">
+                <div class="container-column-right" id="pressure">
+                    <img id="pressure-icon" src="http://cdn.onlinewebfonts.com/svg/img_534459.png" width="30px" height="30px">
+                    <span id="pressure-value"></span>
+                </div>
+                <div class="container-column-right" id="humidity">
+                    <img id="humidity-icon" src="https://www.clipartwiki.com/clipimg/full/43-438030_temperature-reading-humidity-rainfall-weather-comments-temperature-and.png" width="30px" height="25px">
+                    <span id="humidity-value"></span>
+                </div>
+                <div class="container-column-right" id="wind">
+                    <img id="wind-icon" src="https://cdn1.iconfinder.com/data/icons/weather-18/512/wind_storm-512.png" width="35px" height="40px">
+                    <span id="wind-value"></span>
+                </div>
+            </div>
+        </div>
+        <div class="container-row" id="weather-description"></div>
+    </div>
+
+    <div id="container-train">
+        <div class="box" id="box-1">
+            <img id="arrow-up" src="images/sort-up-arrow.png">
+            <div class= "head" id="head-1">
+                <p class="day"></p>
+            </div>
+            <div class= "wagon" id="wagon-1">
+                <div class= "image-content">
+                    <img class="train-image">
+                    <p class="desc"></p>
+                </div>    
+                <div class= "wagon-content" id="wagon-content-1">
+                    <p class="max"></p>
+                    <p class="min"></p>
+                    <p class="pres"></p>
+                    <p class="hum"></p>
+                    <p class="wind"></p>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="box-2">
+            <img id="arrow-up" src="images/sort-up-arrow.png">
+            <div class= "head" id="head-2">
+                <p class="day"></p>
+            </div>
+            <div class= "wagon" id="wagon-2">
+                <div class= "image-content">
+                    <img class="train-image">
+                    <p class="desc"></p>
+                </div>      
+                <div class= "wagon-content" id="wagon-content-2">
+                    <p class="max"></p>
+                    <p class="min"></p>
+                    <p class="pres"></p>
+                    <p class="hum"></p>
+                    <p class="wind"></p>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="box-3">
+            <img id="arrow-up" src="images/sort-up-arrow.png">
+            <div class= "head" id="head-3">
+                <p class="day"></p>
+            </div>
+            <div class= "wagon" id="wagon-3">
+                <div class= "image-content">
+                    <img class="train-image">
+                    <p class="desc"></p>
+                </div> 
+                <div class= "wagon-content" id="wagon-content-3">
+                    <p class="max"></p>
+                    <p class="min"></p>
+                    <p class="pres"></p>
+                    <p class="hum"></p>
+                    <p class="wind"></p>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="box-4">
+            <img id="arrow-up" src="images/sort-up-arrow.png">
+            <div class= "head" id="head-4">
+                <p class="day"></p>
+            </div>
+            <div class= "wagon" id="wagon-4">
+                <div class= "image-content">
+                    <img class="train-image">
+                    <p class="desc"></p>
+                </div>     
+                <div class= "wagon-content" id="wagon-content-4">
+                    <p class="max"></p>
+                    <p class="min"></p>
+                    <p class="pres"></p>
+                    <p class="hum"></p>
+                    <p class="wind"></p>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="box-5">
+            <img id="arrow-up" src="images/sort-up-arrow.png">
+            <div class= "head" id="head-5">
+                <p class="day"></p>
+            </div>
+            <div class= "wagon" id="wagon-5">
+                <div class= "image-content">
+                    <img class="train-image">
+                    <p class="desc"></p>
+                </div>     
+                <div class= "wagon-content" id="wagon-content-5">
+                    <p class="max"></p>
+                    <p class="min"></p>
+                    <p class="pres"></p>
+                    <p class="hum"></p>
+                    <p class="wind"></p>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
