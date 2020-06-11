@@ -1,8 +1,5 @@
 $(document).ready(function(){
-    $('html, body').css({
-        overflow: 'hidden',
-        height: '100%'
-    });
+    
 
     var cities = [];
     var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday', 'Saturday'];
