@@ -16,7 +16,7 @@ Biggest challenge was writing an actual code, understanding asynchronous functio
 
 <img src="weather_app.gif" 
 raw=true
-alt="portfolio design"/>
+alt="weather app gif"/>
 
 
 <a href="https://www.freepik.com/free-photos-vectors/mockup">Mockup vector created by upklyak - www.freepik.com</a>
